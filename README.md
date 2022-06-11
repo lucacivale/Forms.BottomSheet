@@ -14,7 +14,7 @@ In order to make use of the sheet within XAML you can use this namespace:
 
 ### Bottom Sheet Control
 
-The `BottomSheet` is basiclly a `ContentView`, so can set the content of your view directly.
+The `BottomSheet` is basically a `ContentView`, so can set the content of your view directly.
 ```
 <StackLayout>
     <bottomSheet:BottomSheet>
