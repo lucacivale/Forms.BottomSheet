@@ -1,0 +1,90 @@
+<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+
+  <PropertyGroup>
+        <TargetFrameworks></TargetFrameworks>
+        <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">netstandard2.1;Xamarin.iOS10;MonoAndroid90</TargetFrameworks>
+    
+	    <AssemblyName>Forms.BottomSheet</AssemblyName>
+        <RootNamespace>Forms.BottomSheet</RootNamespace>
+        <PackageId>Forms.BottomSheet</PackageId>
+    
+        <Product>Forms.BottomSheet</Product>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+        <Version>1.0.0.0</Version>
+        <PackageVersion>1.0.0.0</PackageVersion>
+        <PackOnBuild>true</PackOnBuild>
+        <NeutralLanguage>en</NeutralLanguage>
+        <LangVersion>default</LangVersion>
+        <DefineConstants>$(DefineConstants);</DefineConstants>
+    
+        <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+
+        <LangVersion>latest</LangVersion>
+        <DebugType>portable</DebugType>
+    
+        <!--TODO: Fill these in-->
+        <PackageLicenseUrl></PackageLicenseUrl>
+        <PackageProjectUrl>LINK TO PROJECT</PackageProjectUrl>
+        <RepositoryUrl>LINK TO PROJECT</RepositoryUrl>
+        <PackageReleaseNotes></PackageReleaseNotes>
+        <PackageIconUrl>ICON URL</PackageIconUrl>
+        <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, Forms.BottomSheet</PackageTags>
+    
+        <Title>Forms.BottomSheet Plugin for Xamarin and Windows</Title>
+        <Summary>Summary of nuget</Summary>
+        <Description></Description>
+    
+    
+        <Owners>YOU</Owners>
+        <Authors>YOU</Authors>
+        <Copyright>Copyright 2019</Copyright>
+
+        <DisableExtraReferences>true</DisableExtraReferences>
+
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+        <PackageLicenseExpression></PackageLicenseExpression>
+
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    
+    </PropertyGroup>
+
+      <PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
+        <DebugSymbols>true</DebugSymbols>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+      </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)'=='Release' ">
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="android\" />
+		<Folder Include="shared\" />
+		<Folder Include="standard\" />
+	</ItemGroup>
+	
+    <ItemGroup>
+        <Compile Include="**\*.shared.cs" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
+    </ItemGroup>
+
+    <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+        <Compile Include="**\*.android.cs" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+        <Compile Include="**\*.iOS.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\..\LICENSE">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+</Project>
