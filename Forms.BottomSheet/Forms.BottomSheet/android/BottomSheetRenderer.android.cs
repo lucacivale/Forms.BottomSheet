@@ -158,7 +158,7 @@ namespace Forms.BottomSheet
 
         void IVisualElementRenderer.SetElement(Xamarin.Forms.VisualElement element)
         {
-            if (!(element is BottomSheet bottomSheet))
+            if (element is not BottomSheet bottomSheet)
             {
                 throw new ArgumentException($"{nameof(element)} must be of type {nameof(BottomSheet)}");
             }

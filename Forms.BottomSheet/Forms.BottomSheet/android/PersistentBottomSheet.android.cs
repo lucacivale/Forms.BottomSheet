@@ -133,7 +133,7 @@ namespace Forms.BottomSheet
         {
             _ = bottomSheetContent ?? throw new ArgumentException($"{nameof(bottomSheetContent)} can not be null.");
 
-            GradientDrawable shape = new GradientDrawable();
+            GradientDrawable shape = new();
 
             var backgroundColor = bottomSheetContent.BackgroundColor.ToAndroid();
             if (backgroundColor.A == 0)

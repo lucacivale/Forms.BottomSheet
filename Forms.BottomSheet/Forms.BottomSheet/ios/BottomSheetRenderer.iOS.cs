@@ -67,7 +67,7 @@ namespace Forms.BottomSheet
             if (element == null)
                 throw new ArgumentNullException(nameof(element));
 
-            if (!(element is BottomSheet))
+            if (element is not BottomSheet)
                 throw new ArgumentNullException("Element is not of type " + typeof(BottomSheet), nameof(element));
 
             var oldElement = Element;
@@ -219,8 +219,8 @@ namespace Forms.BottomSheet
         {
             _ = bottomSheetViewController ?? throw new ArgumentException($"{nameof(bottomSheetViewController)} can not be null.");
 
-            ButtomSheetUIViewController navigationController = new ButtomSheetUIViewController(Element, bottomSheetViewController);
-            UINavigationBarAppearance standardAppearance = new UINavigationBarAppearance();
+            ButtomSheetUIViewController navigationController = new(Element, bottomSheetViewController);
+            UINavigationBarAppearance standardAppearance = new();
             standardAppearance.ConfigureWithOpaqueBackground();
             standardAppearance.ShadowColor = UIColor.Clear;
 
