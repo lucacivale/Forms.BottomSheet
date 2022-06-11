@@ -60,6 +60,5 @@ The sheet content is a `DataTemplate` which will be inflated on the first openin
     </bottomSheet:BottomSheet>
 </StackLayout>
 ```
-![Forms BottomSheet](https://user-images.githubusercontent.com/56133182/173190233-735a07ee-da68-4275-b618-2fc13d72a3f9.gif)
-
+![Example](https://user-images.githubusercontent.com/56133182/173190335-fc9ef962-f380-40c1-985e-9dd8d3d108a3.gif)
 
