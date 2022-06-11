@@ -46,6 +46,7 @@ namespace Forms.BottomSheet
         #region Constructor
         public BottomSheet()
         {
+            VerticalOptions = LayoutOptions.FillAndExpand;
         }
         #endregion
     }

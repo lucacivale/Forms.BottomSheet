@@ -1,7 +1,6 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
 
   <PropertyGroup>
-        <TargetFrameworks></TargetFrameworks>
         <TargetFrameworks>netstandard2.1;Xamarin.iOS10;MonoAndroid12.0</TargetFrameworks>
     
 	    <AssemblyName>Forms.BottomSheet</AssemblyName>
@@ -24,8 +23,6 @@
         <LangVersion>latest</LangVersion>
         <DebugType>portable</DebugType>
     
-        <!--TODO: Fill these in-->
-        <PackageLicenseUrl></PackageLicenseUrl>
         <PackageProjectUrl>https://github.com/lucacivale/Forms.BottomSheet</PackageProjectUrl>
         <RepositoryUrl>https://github.com/lucacivale/Forms.BottomSheet</RepositoryUrl>
         <PackageReleaseNotes></PackageReleaseNotes>
@@ -35,9 +32,8 @@
         <Title>Forms.BottomSheet Plugin for Xamarin and Windows</Title>
         <Summary>Summary of nuget</Summary>
         <Description>Native Bottom Sheet for iOS and Android via Xamarin.Forms.</Description>
-    
-    
-        <Owners>YOU</Owners>
+
+	    <Owner>Luca Civale</Owner>
         <Authors>Luca Civale</Authors>
         <Copyright>Copyright 2022</Copyright>
 
@@ -48,6 +44,10 @@
         <Company />
 
         <Nullable>enable</Nullable>
+
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
     
     </PropertyGroup>
 
@@ -75,14 +75,9 @@
         <Compile Include="**\*.iOS.cs" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid90'">
-      <PackageReference Include="Xamarin.Android.Support.Design">
-        <Version>28.0.0.3</Version>
-      </PackageReference>
-    </ItemGroup>
-
     <ItemGroup>
       <None Remove="LICENSE" />
+      <None Remove="README.md" />
     </ItemGroup>
 
     <ItemGroup>
