@@ -29,8 +29,8 @@
         <PackageIconUrl>ICON URL</PackageIconUrl>
         <PackageTags>xamarin, ios, android, xamarin.forms,Forms.BottomSheet</PackageTags>
     
-        <Title>Forms.BottomSheet Plugin for Xamarin and Windows</Title>
-        <Summary>Summary of nuget</Summary>
+        <Title>BottomSheet Plugin for Xamarin</Title>
+        <Summary>Show a native bottom sheets from Xamarin.Forms</Summary>
         <Description>Native Bottom Sheet for iOS and Android via Xamarin.Forms.</Description>
 
 	    <Owner>Luca Civale</Owner>
@@ -48,6 +48,8 @@
         <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+        <RepositoryType>git</RepositoryType>
     
     </PropertyGroup>
 
